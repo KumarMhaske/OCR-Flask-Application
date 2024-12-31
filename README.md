@@ -105,13 +105,11 @@ If you want to deploy the app, follow these steps:
 
 ### Home Page
 
-![Home Page](screenshots/home_page.png)
+![Home Page](Homepage 1.PNG)
 
 ### OCR Result
 
-![OCR Result](screenshots/ocr_result.png)
-
-*Note: Replace the placeholder paths with actual screenshots in the project folder under `screenshots/`.*
+![OCR Result](result 2.PNG)
 
 ## Usage
 
