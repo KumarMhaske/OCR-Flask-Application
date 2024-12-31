@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #10499e, #e6237e);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        body.mobile-view {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+        }
+        h1 {
+            margin: 20px;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+        }
+        pre {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            margin: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            overflow-x: auto;
+            font-size: 1.1em;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff9a9e, #fad0c4);
+            position: absolute;
+            top: -70px;
+            left: -80px;
+            z-index: -1;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid #ff6a00;
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        footer {
+            margin-top: auto;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .view-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .view-toggle:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <button class="view-toggle" onclick="toggleView()">Toggle View Mode</button>
+    <h1>Extracted Text from Image</h1>
+    <div class="circle"></div>
+    <div class="triangle"></div>
+    <pre>{{ text }}</pre>
+    <div class="button-container">
+        <a href="/">Upload Another Image</a> |
+        <a href="/download/{{ filename }}">Download Uploaded Image</a>
+    </div>
+    <footer>
+        Application made by Kumar Mhaske &copy; 2025
+    </footer>
+    <script>
+        function toggleView() {
+            document.body.classList.toggle('mobile-view');
+        }
+    </script>
+</body>
+</html>
