@@ -105,11 +105,11 @@ If you want to deploy the app, follow these steps:
 
 ### Home Page
 
-![Home Page](Homepage 1.PNG)
+![Home Page](https://github.com/KumarMhaske/OCR-Flask-Application/blob/a1375d5a0f1c7f1abd68958d08cdb4cf1cc62784/Homepage%201.PNG)
 
 ### OCR Result
 
-![OCR Result](result 2.PNG)
+![OCR Result](https://github.com/KumarMhaske/OCR-Flask-Application/blob/a1375d5a0f1c7f1abd68958d08cdb4cf1cc62784/result%202.PNG)
 
 ## Usage
 
